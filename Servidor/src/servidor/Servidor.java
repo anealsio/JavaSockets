@@ -82,7 +82,9 @@ public class Servidor{
                     }
                 }
                 // Caso o arquivo exista
-                if ( verificador != -1 ){                 
+                if ( verificador != -1 ){  
+                    // Mandando OK para o cliente
+                    paraCliente.writeBytes("OK\n");
                     // Muda o nome do diretorio para o com o arquivo solicitado
                     String nomeDiretorioNovo = nomeDiretorio+ "\\" + nomeArquivo[1];
                     // Prepara para ler arquivo
