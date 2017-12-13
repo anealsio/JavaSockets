@@ -84,9 +84,9 @@ public class Servidor{
                 // Caso o arquivo exista
                 if ( verificador != -1 ){                 
                     // Muda o nome do diretorio para o com o arquivo solicitado
-                    nomeDiretorio += "\\" + nomeArquivo[1];
+                    String nomeDiretorioNovo = nomeDiretorio+ "\\" + nomeArquivo[1];
                     // Prepara para ler arquivo
-                    BufferedReader lerArquivo = new BufferedReader(new InputStreamReader(new FileInputStream(nomeDiretorio), "ISO-8859-1"));
+                    BufferedReader lerArquivo = new BufferedReader(new InputStreamReader(new FileInputStream(nomeDiretorioNovo), "ISO-8859-1"));
                     // String que receberá o conteúdo do arquivo
                     String conteudo;
                     // Lendo todo o arquivo
