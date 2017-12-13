@@ -86,9 +86,9 @@ public class Servidor{
                     // Mandando OK para o cliente
                     paraCliente.writeBytes("OK\n");
                     // Muda o nome do diretorio para o com o arquivo solicitado
-                    String nomeDiretorioNovo = nomeDiretorio+ "\\" + nomeArquivo[1];
+                    nomeDiretorio += "\\" + nomeArquivo[1];
                     // Prepara para ler arquivo
-                    BufferedReader lerArquivo = new BufferedReader(new InputStreamReader(new FileInputStream(nomeDiretorioNovo), "ISO-8859-1"));
+                    BufferedReader lerArquivo = new BufferedReader(new InputStreamReader(new FileInputStream(nomeDiretorio), "ISO-8859-1"));
                     // String que receberá o conteúdo do arquivo
                     String conteudo;
                     // Lendo todo o arquivo
